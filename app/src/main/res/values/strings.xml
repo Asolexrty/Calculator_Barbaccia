@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="textview_input_number1">TextView</string>
+    <string name="textview_input_number2">TextView</string>
+    <string name="button_label_add">+</string>
+    <string name="button_sub">-</string>
+    <string name="button_multiply">*</string>
+    <string name="button_division">/</string>
+    <string name="hint_first_input_number">Inserisci Numero</string>
+    <string name="textview_result">0</string>
+</resources>
