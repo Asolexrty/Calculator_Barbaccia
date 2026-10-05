@@ -13,10 +13,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int number_1=0;
-    private int number_2=0;
+    private double number_1=0;
+    private double number_2=0;
 
-    private int result=0;
+    private double result=0;
 
     private EditText numberView1;
     private EditText numberView2;
@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
         mShowResult=findViewById(R.id.textView_result);
@@ -36,21 +35,50 @@ public class MainActivity extends AppCompatActivity {
     public void sum(View view){
 
         if (numberView1 != null && numberView2 != null) {
-            number_1=Integer.parseInt(numberView1.getText().toString());
-            number_2=Integer.parseInt(numberView2.getText().toString());
+            number_1=Double.parseDouble(numberView1.getText().toString());
+            number_2=Double.parseDouble(numberView2.getText().toString());
 
             result=number_1+number_2;
 
-            mShowResult.setText(result);
-
+            mShowResult.setText(String.valueOf(result));
 
         }
-
-        ;
-
-
-
     }
 
+    public void sub(View view){
+        if (numberView1 != null && numberView2 != null) {
+            number_1=Double.parseDouble(numberView1.getText().toString());
+            number_2=Double.parseDouble(numberView2.getText().toString());
+
+            result=number_1-number_2;
+
+            mShowResult.setText(String.valueOf(result));
+
+        }
+    }
+
+    public void multiply(View view){
+        if (numberView1 != null && numberView2 != null) {
+            number_1=Double.parseDouble(numberView1.getText().toString());
+            number_2=Double.parseDouble(numberView2.getText().toString());
+
+            result=number_1*number_2;
+
+            mShowResult.setText(String.valueOf(result));
+
+        }
+    }
+
+    public void division(View view){
+        if (numberView1 != null && numberView2 != null) {
+            number_1=Double.parseDouble(numberView1.getText().toString());
+            number_2=Double.parseDouble(numberView2.getText().toString());
+
+            result=number_1/number_2;
+
+            mShowResult.setText(String.valueOf(result));
+
+        }
+    }
 
 }
